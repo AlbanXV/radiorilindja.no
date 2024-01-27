@@ -9,20 +9,20 @@ const resources = {
     translation: {
       "Nettradio": "24/7 Nettradio",
       "Program": "PROGRAM - INTERVJU",
-      "Gjest": "Gjest",
+      "Gjest": "Gjest i studio",
       "Dato": "Dato",
       "Klokkeslett": "Klokkeslett",
-      "Support": "STØTT OSS" 
+      "Support": "STØTT RADIO RILINDJA" 
     }
   },
   sq: {
     translation: {
       "Nettradio": "24/7 Radio Online",
-      "Program": "PROGRAM - INTERVISTA",
-      "Gjest": "Mysafir",
-      "Dato": "Datë",
+      "Program": "PROGRAMI - INTERVISTA",
+      "Gjest": "Mysafirë në studio",
+      "Dato": "Data",
       "Klokkeslett": "Koha", 
-      "Support": "NDIHMO EDHE TI" 
+      "Support": "NDIHMO RADIO RILINDJEN" 
     }
   },
   
