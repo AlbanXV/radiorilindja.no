@@ -12,17 +12,19 @@ const resources = {
       "Gjest": "Gjest i studio",
       "Dato": "Dato",
       "Klokkeslett": "Klokkeslett",
-      "Support": "STØTT RADIO RILINDJA" 
+      "Support": "STØTT RADIO RILINDJA" ,
+      "Fredag":"LIVE HVER FREDAG"
     }
   },
   sq: {
     translation: {
-      "Nettradio": "24/7 Radio Online",
+      "Nettradio": "24/7 Internet Radio",
       "Program": "PROGRAMI - INTERVISTA",
       "Gjest": "Mysafirë në studio",
       "Dato": "Data",
       "Klokkeslett": "Koha", 
-      "Support": "NDIHMO RADIO RILINDJEN" 
+      "Support": "NDIHMO RADIO RILINDJEN",
+      "Fredag":"LIVE CDO TE PREMTE"
     }
   },
   

@@ -10,10 +10,11 @@ function InfoSection() {
             <h1 className='text-2xl md:text-4xl font-bold md:py-6 ease-in-out duration-500'>{t('Program')}</h1>
             <p className='md:text-2xl text-xl font-bold ease-in-out duration-500 py-4'>{t('Gjest')}: TBA</p>
             <p className='md:text-2xl text-xl font-bold ease-in-out duration-500 py-4'>{t('Dato')}: TBA</p>
-            <p className='md:text-2xl text-xl font-bold ease-in-out duration-500 py-4'>{t('Klokkeslett')}: 20:00 CET</p>
+            <p className='md:text-2xl text-xl font-bold ease-in-out duration-500 py-4'>{t('Klokkeslett')}: 20:00 - 23:00 (CET)</p>
             <div className='rounded-md border-blue-500 border-solid border-4 mx-auto flex flex-col justify-center max-w-[300px]'>
                 <img src={Interview} />
             </div>
+            <p className='md:text-2xl text-xl font-bold ease-in-out duration-500 py-4'>{t('Fredag')}</p>
         </div>
     )
 }
