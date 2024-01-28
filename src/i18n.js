@@ -13,18 +13,22 @@ const resources = {
       "Dato": "Dato",
       "Klokkeslett": "Klokkeslett",
       "Support": "STØTT RADIO RILINDJA" ,
-      "Fredag":"LIVE HVER FREDAG"
+      "Fredag":"LIVE HVER FREDAG",
+      "Home":"HJEM",
+      "Program":"PROGRAM",
     }
   },
   sq: {
     translation: {
       "Nettradio": "24/7 Internet Radio",
       "Program": "PROGRAMI - INTERVISTA",
-      "Gjest": "Mysafirë në studio",
+      "Gjest": "Mysafir në studio",
       "Dato": "Data",
       "Klokkeslett": "Koha", 
       "Support": "NDIHMO RADIO RILINDJEN",
-      "Fredag":"LIVE CDO TE PREMTE"
+      "Fredag":"LIVE CDO TE PREMTE",
+      "Home":"BALLINA",
+      "Program":"PROGRAMET",
     }
   },
   

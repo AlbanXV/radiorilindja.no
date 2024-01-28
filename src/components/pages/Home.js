@@ -15,8 +15,6 @@ function Home() {
       <br />
       <InfoSection />
       <SupportSection />
-      <br />
-      <br />
       <Footer />
     </>
   );

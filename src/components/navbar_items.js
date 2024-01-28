@@ -1,16 +1,19 @@
+import i18n from '../i18n';
+
+// WIP, gotta fix a better solution for i18n use
 export const navbar_items = [
     {
-        title: "Home",
+        title: i18n.t('Home'),
         url: "/",
         cName: "nav-links"
     },
     {
-        title: "About",
-        url: "/About",
+        title: i18n.t('Program'),
+        url: "/Program",
         cName: "nav-links"
     },
     {
-        title: "Contact",
+        title: "KONTAKT",
         url: "/Contact",
         cName: "nav-links"
     },

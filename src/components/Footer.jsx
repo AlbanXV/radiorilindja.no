@@ -13,7 +13,7 @@ import {
 function Footer() {
   return (
 
-    <div className=' text-white select-none max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8'>
+    <div className=' text-white select-none max-w-[1240px] mx-auto md:py-16 py-0 px-4 grid lg:grid-cols-3 gap-8'>
         <div>
             <h1 className='w-full text-3xl font-bold'>RADIO RILINDJA</h1>
             <p className='py-2'>Address: Sverres gate 8, 0652 Oslo</p>

@@ -5,6 +5,7 @@ import React from 'react';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
+import Program from './components/pages/Program';
 import { useTranslation } from 'react-i18next';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/' exact element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/program' element={<Program />} />
       </Routes>
       </Router> 
     </>
