@@ -42,8 +42,8 @@ function Navbar() {
                             </li>
                         )
                     })}
-                    <button onClick={() => changeLanguage('no')} className=' bg-blue-800 rounded-md w-[80px]'>NORSK</button>
-                    <button onClick={() => changeLanguage('sq')} className=' bg-red-800 rounded-md w-[80px]'>SHQIP</button>
+                    <button onClick={() => changeLanguage('no')} className=' bg-blue-800 rounded-md w-[80px] bg-opacity-50'>NORSK</button>
+                    <button onClick={() => changeLanguage('sq')} className=' bg-red-800 rounded-md w-[80px] bg-opacity-50'>SHQIP</button>
                 </ul>
 
                 <div onClick={handleNav} className='block md:hidden'>
@@ -61,8 +61,8 @@ function Navbar() {
                             )
                         })}
                         <br />
-                        <button onClick={() => changeLanguage('no')} className=' bg-blue-800 rounded-md w-[80px]'>NORSK</button>
-                        <button onClick={() => changeLanguage('sq')} className=' bg-red-800 rounded-md w-[80px]'>SHQIP</button>
+                        <button onClick={() => changeLanguage('no')} className=' bg-blue-800 rounded-md w-[80px] bg-opacity-50'>NORSK</button>
+                        <button onClick={() => changeLanguage('sq')} className=' bg-red-800 rounded-md w-[80px] bg-opacity-50'>SHQIP</button>
                     </ul>
                 </div>
 
