@@ -50,7 +50,7 @@ function Navbar() {
                     {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
                 </div>
 
-                <div className={nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-white-900 bg-[#000300] bg-gradient-to-t from-[#000300] to-blue-900 ease-in-out duration-500' : 'fixed left-[-100%]'}>
+                <div className={nav ? 'fixed left-0 top-0 w-[65%] h-full bg-[#000300] bg-gradient-to-t from-[#000300] to-blue-900 ease-in-out duration-500' : 'fixed left-[-100%]'}>
                     <h1 className='w-full text-3xl font-bold m-4 text-white-900'>RADIO RILINDJA</h1>
                     <ul className='uppercase p-4'>
                         {navbar_items.map((item, index) => {

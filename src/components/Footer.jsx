@@ -8,6 +8,7 @@ import {
     FaTwitterSquare,
     FaInstagramSquare,
     FaGithubSquare,
+    FaSpotify,
 } from 'react-icons/fa'
 
 function Footer() {
@@ -21,6 +22,7 @@ function Footer() {
                 <Link to='https://www.youtube.com/@RadioRilindjaNorway/'><FaYoutubeSquare size={30} /></Link>
                 <Link to='https://www.facebook.com/radiorilindja'><FaFacebookSquare size={30} /></Link>
                 <Link to='https://twitter.com/RilindjaNorway'><FaTwitterSquare size={30} /></Link>
+                <Link to='https://open.spotify.com/show/3gu7krgKOeJotrk0l9xc3z'><FaSpotify size={30} /></Link>
                 <Link to='https://github.com/AlbanXV/radiorilindja.no'><FaGithubSquare size={30} /></Link>
                 <Link to='https://www.instagram.com/radio.rilindja.norway/'><FaInstagramSquare size={30} /></Link>
             </div>
