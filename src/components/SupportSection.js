@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Vipps from '../assets/vipps.png';
 import gras from '../assets/gras.jpg';
@@ -17,7 +18,7 @@ function SupportSection() {
           </div>
 
           <div>
-            <img className='w-[291px] rounded-md' src={gras} />
+            <Link to='https://www.norsk-tipping.no/grasrotandelen/din-mottaker/926943545'><img className='w-[291px] rounded-md' src={gras} /></Link>
           </div>
           
         </div>

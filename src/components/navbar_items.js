@@ -17,4 +17,9 @@ export const navbar_items = [
         url: "/Contact",
         cName: "nav-links"
     },
+    {
+        title: "PORTALI",
+        url: "https://albaner.no",
+        cName: "nav-links"
+    },
 ]
