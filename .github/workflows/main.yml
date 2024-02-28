@@ -17,4 +17,4 @@ jobs:
         server: ${{ secrets.SFTP_SERVER }}
         username: ${{ secrets.SFTP_USER }}
         password: ${{ secrets.SFTP_PASS }}
-        server-dir: /cwbx9ait2_radiozyh/webroots/r1033653/public_html
+        server-dir: /cwbx9ait2_radiozyh/webroots/r1033653/public_html/
