@@ -1,20 +1,20 @@
-on:
-  push:
-    branches:
-      - main
-name: Deploy website on push
-jobs:
-  web-deploy:
-    name: FTP-Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: Get latest code
-      uses: actions/checkout@v3
-    
-    - name: Sync Files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.SFTP_SERVER }}
-        username: ${{ secrets.SFTP_USER }}
-        password: ${{ secrets.SFTP_PASS }}
-        server-dir: /cwbx9ait2_radiozyh/webroots/r1033653/public_html/
+#on:
+#  push:
+#    branches:
+#      - main
+#name: Deploy
+#jobs:
+#  web-deploy:
+#    name: FTP-Deploy
+#    runs-on: ubuntu-latest
+#    steps:
+#    - name: Get latest code
+#      uses: actions/checkout@v3
+#    
+#    - name: Sync Files
+#      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+#      with:
+#        server: ${{ secrets.SFTP_SERVER }}
+#        username: ${{ secrets.SFTP_USER }}
+#        password: ${{ secrets.SFTP_PASS }}
+#        server-dir: /cwbx9ait2_radiozyh/webroots/r1033653/public_html/
