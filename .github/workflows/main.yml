@@ -1,0 +1,38 @@
+name: CI-SFTP
+
+# controls when the action will run. 
+on:
+  # main branch push or pull
+  push:
+    branches: [ main ]
+#  pull_request:
+#    branches: [ main ]
+
+  # allow manually workflow
+  workflow_dispatch:
+
+# workflow with one or more jobs (sequentially / parallel)
+jobs:
+  # workflow contains one job called "SFTP"
+  deploy-via-sftp:
+    runs-on: ubuntu-latest
+    steps:
+      # checks the github rep. under $GITHUB_WORKSPACE that way the job can access it
+      - uses: actions/checkout@v2
+          
+      - name: SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.1
+        with:
+          username: ssh.cwbx9ait2.service.one #SFTP/SSH username
+          server: radiorilindja.no # website's domain name / ip
+          port: 22 # default 22
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+          
+          # puts all file under this path
+          local_path: ./* # default: ./*
+          # files will copy to remote_path
+          remote_path: /cwbx9ait2_radiozyh/webroots/r1033653/public_html/
+          
+          # sftp args
+          args: '-o ConnectTimeout=5'
