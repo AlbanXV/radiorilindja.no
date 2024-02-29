@@ -1,3 +1,42 @@
+# SSH/SFTP Deploy
+
+name: SSH/SFTP Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: SSH/SFT Deploy every commit
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v3
+
+    - name: Install packages
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: "npm"
+    - run: npm ci
+
+    - name: Build project
+      run: npm run build
+
+    - name: Sync Files
+      uses: SamKirkland/web-deploy@v1
+      with:
+        target-server: ${{ secrets.SFTP_SERVER }}
+        remote-user: ${{ secrets.SFTP_USER }}
+        private-ssh-key: ${{ secrets.SSH_KEY }}
+        destination-path: ${{ secrets.DEST_PWD }}
+
+
+
+# FTP Deploy
+
 #on:
 #  push:
 #    branches:
