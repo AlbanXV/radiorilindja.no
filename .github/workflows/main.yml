@@ -25,6 +25,8 @@ jobs:
 
     - name: Build project
       run: npm run build
+      env:
+        CI: false
 
     - name: Sync Files
       uses: SamKirkland/web-deploy@v1
