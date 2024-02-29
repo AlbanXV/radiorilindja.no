@@ -29,12 +29,21 @@ jobs:
         CI: false
 
     - name: Sync Files
-      uses: SamKirkland/web-deploy@v1
+      #uses: SamKirkland/web-deploy@v1
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        target-server: ${{ secrets.SFTP_SERVER }}
-        remote-user: ${{ secrets.SFTP_USER }}
-        private-ssh-key: ${{ secrets.SSH_KEY }}
-        destination-path: ${{ secrets.DEST_PWD }}
+        username: ${{ secrets.SFTP_USER }}
+        server: ${{ secrets.SFTP_SERVER }}
+        password: ${{ secrets.SFTP_PASS }}
+        #ssh_private_key: ${{ secrets.SSH_KEY }}
+        local_path: ./*
+        remote_path: ${{ secrets.DEST_PWD }}
+        sftpArgs: '-o ConnectTimeout=5'
+      
+        #target-server: ${{ secrets.SFTP_SERVER }}
+        #remote-user: ${{ secrets.SFTP_USER }}
+        #private-ssh-key: ${{ secrets.SSH_KEY }}
+        #destination-path: ${{ secrets.DEST_PWD }}
 
 
 # FTP Deploy
