@@ -20,7 +20,8 @@ jobs:
       with:
         node-version: 18
         cache: "npm"
-    - run: npm ci
+    #- run: npm ci
+    - run: npm install
 
     - name: Build project
       run: npm run build
