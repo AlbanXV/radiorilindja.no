@@ -34,7 +34,6 @@ jobs:
         destination-path: ${{ secrets.DEST_PWD }}
 
 
-
 # FTP Deploy
 
 #on:
