@@ -38,6 +38,9 @@ jobs:
         REMOTE_HOST: ${{ secrets.SFTP_SERVER }}
         REMOTE_USER: ${{ secrets.SFTP_USER }}
         TARGET: ${{ secrets.REMOTE_TARGET }}
+        SCRIPT_BEFORE: |
+          whoami
+          ls -al
 
     #- name: Setup SSH
       #run: |
