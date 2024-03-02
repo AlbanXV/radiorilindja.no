@@ -51,7 +51,7 @@ jobs:
         
     - name: Transfer / Copy builds to server
       run: |
-        rsync -vrm ./dist/ ${{ secrets.SFTP_USER }}:/home/cwbx9ait2_radiozyh/test/
+        rsync -vrm /build/ ${{ secrets.SFTP_USER }}:/home/cwbx9ait2_radiozyh/test/
         ssh ${{ secrets.SFTP_USER }} "pm2 restart ecosystem.config.js"
 
     #- name: Sync Files
