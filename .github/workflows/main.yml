@@ -1,4 +1,4 @@
-# SSH/SFTP Deploy
+# SSH Deploy
 
 name: SSH Deploy
 
@@ -30,17 +30,6 @@ jobs:
       env:
         CI: false
 
-    #- name: Deploy to server
-      #uses: easingthemes/ssh-deploy@main
-      #with:
-        #SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIV_KEY }}
-        #ARGS: "-rlgoDzvc -i --delete"
-        #SOURCE: "dist/"
-        #REMOTE_HOST: ${{ secrets.SFTP_SERVER }}
-        #REMOTE_USER: ${{ secrets.SFTP_USER }}
-        #TARGET: ${{ secrets.REMOTE_TARGET }}
-        #SCRIPT_BEFORE: ls
-
     - name: Setup SSH
       run: |
         mkdir -p ~/.ssh/
@@ -52,47 +41,4 @@ jobs:
         
     - name: Transfer / Copy builds to server
       run: |
-        rsync -vrm ./build/* ${{ secrets.SFTP_USER }}:/home/cwbx9ait2_radiozyh/test/
-
-    #- name: Sync Files
-      #uses: SamKirkland/web-deploy@v1
-      #uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-      #with:
-        #wlixcc:
-        #username: ${{ secrets.SFTP_USER }}
-        #server: ${{ secrets.SFTP_SERVER }}
-        #password: ${{ secrets.SFTP_PASS }}
-        #ssh_private_key: ${{ secrets.SSH_PRIV_KEY }}
-        #local_path: ./*
-        #remote_path: ${{ secrets.REMOTE_TARGET }}
-        #sftpArgs: '-o ConnectTimeout=5'
-
-        #kirkland:
-        #target-server: ${{ secrets.SFTP_SERVER }}
-        #remote-user: ${{ secrets.SFTP_USER }}
-        #private-ssh-key: ${{ secrets.SSH_PRIV_KEY }}
-        #destination-path: ${{ secrets.REMOTE_TARGET }}
-
-
-# FTP Deploy
-
-#on:
-#  push:
-#    branches:
-#      - main
-#name: Deploy
-#jobs:
-#  web-deploy:
-#    name: FTP-Deploy
-#    runs-on: ubuntu-latest
-#    steps:
-#    - name: Get latest code
-#      uses: actions/checkout@v3
-#    
-#    - name: Sync Files
-#      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-#      with:
-#        server: ${{ secrets.SFTP_SERVER }}
-#        username: ${{ secrets.SFTP_USER }}
-#        password: ${{ secrets.SFTP_PASS }}
-#        server-dir: /cwbx9ait2_radiozyh/webroots/r1033653/public_html/
+        rsync -vrm ./build/* ${{ secrets.SFTP_USER }}:${{ secrets.REMOTE_TARGET }}
