@@ -1,6 +1,6 @@
 # SSH/SFTP Deploy
 
-name: SSH/SFTP Deploy
+name: SSH Deploy
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   web-deploy:
-    name: SSH/SFT Deploy every commit
+    name: SSH deployment every commit
     runs-on: ubuntu-latest
     steps:
     - name: Get latest code
@@ -21,12 +21,23 @@ jobs:
         node-version: 18
         cache: "npm"
     #- run: npm ci
-    - run: npm install
+    - name: Install npm dependencies
+      run: npm install
 
     - name: Build project
-      run: npm run build
+      run: npm run build --if-present
       env:
         CI: false
+
+    - name: Deploy to server
+      uses: easingthemes/ssh-deploy@main
+      with:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIV_KEY }}
+        ARGS: "-rlgoDzvc -i --delete"
+        SOURCE: "dist/"
+        REMOTE_HOST: ${{ secrets.SFTP_SERVER }}
+        REMOTE_USER: ${{ secrets.SFTP_USER }}
+        TARGET: ${{ secrets.REMOTE_TARGET }}
 
     - name: Setup SSH
       run: |
@@ -46,18 +57,20 @@ jobs:
       #uses: SamKirkland/web-deploy@v1
       #uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       #with:
+        #wlixcc:
         #username: ${{ secrets.SFTP_USER }}
         #server: ${{ secrets.SFTP_SERVER }}
         #password: ${{ secrets.SFTP_PASS }}
-        #ssh_private_key: ${{ secrets.SSH_KEY }}
+        #ssh_private_key: ${{ secrets.SSH_PRIV_KEY }}
         #local_path: ./*
-        #remote_path: ${{ secrets.DEST_PWD }}
+        #remote_path: ${{ secrets.REMOTE_TARGET }}
         #sftpArgs: '-o ConnectTimeout=5'
-      
+
+        #kirkland:
         #target-server: ${{ secrets.SFTP_SERVER }}
         #remote-user: ${{ secrets.SFTP_USER }}
-        #private-ssh-key: ${{ secrets.SSH_KEY }}
-        #destination-path: ${{ secrets.DEST_PWD }}
+        #private-ssh-key: ${{ secrets.SSH_PRIV_KEY }}
+        #destination-path: ${{ secrets.REMOTE_TARGET }}
 
 
 # FTP Deploy
