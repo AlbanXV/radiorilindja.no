@@ -28,17 +28,31 @@ jobs:
       env:
         CI: false
 
-    - name: Sync Files
+    - name: Setup SSH
+      run: |
+        mkdir -p ~/.ssh/
+        echo "${{ secrets.SSH_PRIV_KEY }}" > ~/.ssh/id_rsa
+        echo "${{ secrets.SSH_PUB_KEY }}" > ~/.ssh/id_rsa.pub
+        chmod 600 ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa.pub
+        ssh-keyscan -H ${{ secrets.SFTP_SERVER }} >> ~/.ssh/known_hosts
+        
+    - name: Transfer / Copy builds to server
+      run: |
+        rsync -vrm .output/* ${{ secrets.SFTP_USER }}:/home/cwbx9ait2_radiozyh/test/
+        ssh ${{ secrets.SFTP_USER }} "pm2 restart ecosystem.config.js"
+
+    #- name: Sync Files
       #uses: SamKirkland/web-deploy@v1
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-      with:
-        username: ${{ secrets.SFTP_USER }}
-        server: ${{ secrets.SFTP_SERVER }}
-        password: ${{ secrets.SFTP_PASS }}
+      #uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      #with:
+        #username: ${{ secrets.SFTP_USER }}
+        #server: ${{ secrets.SFTP_SERVER }}
+        #password: ${{ secrets.SFTP_PASS }}
         #ssh_private_key: ${{ secrets.SSH_KEY }}
-        local_path: ./*
-        remote_path: ${{ secrets.DEST_PWD }}
-        sftpArgs: '-o ConnectTimeout=5'
+        #local_path: ./*
+        #remote_path: ${{ secrets.DEST_PWD }}
+        #sftpArgs: '-o ConnectTimeout=5'
       
         #target-server: ${{ secrets.SFTP_SERVER }}
         #remote-user: ${{ secrets.SFTP_USER }}
