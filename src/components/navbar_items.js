@@ -19,7 +19,7 @@ export const navbar_items = [
     },
     {
         title: "PORTALI",
-        url: "https://albaner.no",
+        url: "https://albaner.radiorilindja.no",
         cName: "nav-links"
     },
 ]
