@@ -33,11 +33,11 @@ The page will reload when you make changes.
 
 Launches the test runner in the interactive watch mode.
 
-## Sanity.io Usage
-
-TBA
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+## Sanity.io Usage
+
+TBA
