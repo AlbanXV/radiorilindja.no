@@ -7,7 +7,7 @@ Still in development.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
-A website made for Radio Rilindja using React.
+A website made for Radio Rilindja using React and Sanity.io (soon) which is a CMS I'm using as a backend service with real-time datastore.
 
 You can visit the website [here](https://radiorilindja.no)
 
