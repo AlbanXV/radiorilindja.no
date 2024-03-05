@@ -20,7 +20,7 @@ You can visit the website [here](https://radiorilindja.no)
 "react-icons": "^5.0.1",\
 "react-router-dom": "^6.21.1"
 
-## Usage
+## React Usage
 
 ### `npm start`
 
@@ -32,6 +32,10 @@ The page will reload when you make changes.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.
+
+## Sanity.io Usage
+
+TBA
 
 ### `npm run build`
 
