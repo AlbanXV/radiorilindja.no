@@ -41,7 +41,7 @@ jobs:
     - name: Deploy Sanity
       run: |
         cd backend
-        npx @sanity/cli deploy
+        npm run build
       env:
         SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
 
