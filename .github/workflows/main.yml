@@ -38,12 +38,12 @@ jobs:
       #env:
         #CI: false
     
-    - name: Deploy Sanity (Build project)
-      uses: sanity-io/github-action-sanity@v0.7-alpha
+    - name: Deploy Sanity
+      run: |
+        cd backend
+        npx @sanity/cli deploy
       env:
         SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
-      with:
-        args: deploy
 
     - name: Setup SSH
       run: |
