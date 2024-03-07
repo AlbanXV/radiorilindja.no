@@ -40,7 +40,7 @@ jobs:
     
     - name: Deploy Sanity
       run: |
-        cd ./backend
+        cd studio
         npm run build
       env:
         SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
