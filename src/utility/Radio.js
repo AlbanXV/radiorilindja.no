@@ -22,7 +22,7 @@ function Radio() {
     }
 
     return (
-        <div onClick={handlePlay} className='flex justify-center p-4'>
+        <div onClick={handlePlay} className='flex justify-center p-4 cursor-pointer'>
           {!playBtn ? <FaPlayCircle size={80} /> : <FaPauseCircle size={80} />}
         </div>
     )

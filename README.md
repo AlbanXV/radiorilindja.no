@@ -7,7 +7,7 @@ Still in development.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
-A website made for Radio Rilindja using React and Sanity.io (soon) which is a CMS I'm using as a backend service with real-time datastore.
+A website made for Radio Rilindja using React and Sanity.io which is a CMS I'm using as a backend service with real-time datastore.
 
 You can visit the website [here](https://radiorilindja.no)
 
@@ -40,4 +40,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## Sanity.io Usage
 
-TBA
+### `npm run dev` in 'backend' folder through cd
+Runs the Sanity.io server on the local machine.\
+Open [http://localhost:3333](http://localhost:3333) to view it in your browser.

@@ -2,18 +2,15 @@ import React from 'react';
 import MainSection from '../MainSection';
 import Footer from '../Footer';
 import App from '../../App';
-import InfoSection from '../InfoSection';
+//import InfoSection from '../InfoSection';
 import SupportSection from '../SupportSection';
+import HighlightedPost from '../HighlightedPost';
 
 function Home() {
   return (
     <>
       <MainSection />
-      <br />
-      <br />
-      <br />
-      <br />
-      <InfoSection />
+      <HighlightedPost />
       <SupportSection />
       <Footer />
     </>

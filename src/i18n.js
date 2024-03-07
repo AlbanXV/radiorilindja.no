@@ -12,10 +12,14 @@ const resources = {
       "Gjest": "Gjest i studio",
       "Dato": "Dato",
       "Klokkeslett": "Klokkeslett",
-      "Support": "STØTT RADIO RILINDJA" ,
+      "Support": "Støtt Radio Rilindja" ,
       "Fredag":"LIVE HVER FREDAG",
       "Home":"HJEM",
       "Program":"PROGRAM",
+      "FredagNy":"Live hver fredag fra kl. 20.00 - 23.00 (CET)",
+      "Button":"Vis mer",
+      "ProgramNy":"Kommende intervjuer",
+      "ProgramI":"Her blir det vist artikler angående fremtidige intervjuer med gitt dato.",
     }
   },
   sq: {
@@ -25,10 +29,14 @@ const resources = {
       "Gjest": "Mysafir në studio",
       "Dato": "Data",
       "Klokkeslett": "Koha", 
-      "Support": "NDIHMO RADIO RILINDJEN",
+      "Support": "Ndihmo Radio Rilindjen",
       "Fredag":"LIVE CDO TE PREMTE",
       "Home":"BALLINA",
       "Program":"PROGRAMET",
+      "FredagNy": "Live cdo te premte nga ora 20.00 - 23.00 (CET)",
+      "Button": "Shiko më shumë",
+      "ProgramNy":"Intervistat e radhës",
+      "ProgramI":"test",
     }
   },
   
