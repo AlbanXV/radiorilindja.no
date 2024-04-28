@@ -3,7 +3,7 @@ import { FaPlayCircle, FaPauseCircle } from 'react-icons/fa'
 
 function Radio() {
     const [playBtn, setPlayBtn] = useState(false);
-    const [audio] = useState(new Audio('http://radiorilindja.dyndns.org:8080/;&type=mp3'));
+    const [audio] = useState(new Audio('https://radio.albaner.no/;&type=mp3'));
 
     const handlePlay = () => {
         if (!playBtn) {
