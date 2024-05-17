@@ -9,6 +9,7 @@ import Program from './components/pages/Program';
 import Post from './components/pages/Post';
 import BlogPost from './components/pages/BlogPost';
 import { useTranslation } from 'react-i18next';
+import SelectedProgram from './components/pages/SelectedProgram';
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/program' element={<Program />} />
-        <Route path='/post/:slug' element={<BlogPost />} />
+        <Route path='/post/:slug' element={<SelectedProgram />} />
         <Route path='/post' element={<Post />} />
       </Routes>
       </Router> 

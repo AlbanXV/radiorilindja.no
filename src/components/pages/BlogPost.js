@@ -41,7 +41,7 @@ function BlogPost() {
 
     return (
         <main className='bg-gradient-to-t from-transparent to-blue-900 min-h-screen p-12'>
-            <div className='text-white py-4'>
+            <div className='text-white py-4 relative'>
                 <Link to='/program'><FaArrowLeft size={30} /></Link>
             </div>
             <article className='container shadow-lg mx-auto bg-black text-white rounded-lg'>
@@ -54,9 +54,14 @@ function BlogPost() {
                     <img 
                         src={blogPost.mainImage.asset.url} 
                         alt={blogPost.title} 
-                        className='w-full object-cover rounded-t' 
+                        className='absolute w-full object-contain blur-0 z-10 rounded-t' 
                         style={{height: "400px"}} />
-                    <h1 className='text-3xl items-center justify-center py-2 flex lg:text-6xl mb-4'>{blogPost.title}</h1>
+                    <img 
+                        src={blogPost.mainImage.asset.url} 
+                        alt={blogPost.title} 
+                        className='absoule w-full z-0 object-fill blur-md rounded-b-full opacity-75' 
+                        style={{height: "400px"}} />
+                    <h1 className='text-3xl items-center text-center justify-center py-2 flex lg:text-6xl mb-4'>{blogPost.title}</h1>
                     <p className='text-center py-2'>{t('Klokkeslett')}: 20:00 - 23:00 (CET)</p>
                     <p className='text-center py-2'>{t('Dato')}: {new Date(blogPost.eventDate).toLocaleDateString()}</p>
                 </header>

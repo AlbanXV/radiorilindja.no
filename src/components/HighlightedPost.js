@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 
 // <h2 className='text-lg text-white flex justify-center mb-12'>{t('FredagNy')}</h2>
 
+// <h3 className='text-lg font-bold px-3 py-4 bg-black text-white bg-opacity-75 rounded'>{t('Dato')}: {new Date(post.eventDate).toLocaleDateString()}</h3>
+
 function HighlightedPost() {
     const { t, i18n } = useTranslation();
 
@@ -45,21 +47,21 @@ function HighlightedPost() {
                 bg-clip-text text-transparent
                 bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.sky.400),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] 
                 bg-[length:200%_auto] animate-gradient'>{t('FredagNy')}</p>
-                <h1 className='text-2xl md:text-4xl md:py-6 py-4 my-5 ease-in-out duration-500 font-bold flex justify-center'>{t('ProgramNy')}</h1>
+                <h1 className='text-2xl md:text-4xl md:py-6 lg:py-4 lg:my-5 ease-in-out duration-500 font-bold flex justify-center'>{t('ProgramNy')}</h1>
                 <div className='grid md:grid-cols-1 lg:grid-cols-1 gap-8'>
                     {postData && postData.slice(0,1).map((post, index) => (
                     <article>
                         <Link to={"/post/" + post.slug.current} key={post.slug.current}>
-                        <span className='block h-96 relative rounded shadow leading-snug bg-black border-l-8 border-blue-400 hover:border-blue-500' key={index}>
+                        <span className='block h-96 relative rounded shadow leading-snug bg-transparent' key={index}>
                             <img
                                 src={post.mainImage.asset.url}
                                 alt={post.mainImage.alt}
                                 className='w-full h-full rounded-r object-contain absolute'
                             />
-                            <span className='block relative h-full flex justify-end items-end pr-4 pb-4'>
-                                <h3 className='text-lg font-bold px-3 py-4 bg-black text-white bg-opacity-75 rounded'>{t('Dato')}: {new Date(post.eventDate).toLocaleDateString()}</h3>
+                            <span className='block relative h-full flex justify-center items-end pr-4 pb-4'>
+                                <p className='md:text-2xl text-lg text-center py-2 px-2 bg-black text-white bg-opacity-75 rounded'>{post.title}</p>
                             </span>
-                            <p className='md:text-2xl text-lg text-center py-2'>{post.title}</p>
+
                         </span>
                         </Link>
                     </article>
