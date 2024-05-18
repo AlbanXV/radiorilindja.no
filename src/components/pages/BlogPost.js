@@ -59,7 +59,7 @@ function BlogPost() {
                     <img 
                         src={blogPost.mainImage.asset.url} 
                         alt={blogPost.title} 
-                        className='absoule w-full z-0 object-fill blur-md rounded-b-full opacity-75' 
+                        className='w-full z-0 object-cover blur-md opacity-75' 
                         style={{height: "400px"}} />
                     <h1 className='text-3xl items-center text-center justify-center py-2 flex lg:text-6xl mb-4'>{blogPost.title}</h1>
                     <p className='text-center py-2'>{t('Klokkeslett')}: 20:00 - 23:00 (CET)</p>
