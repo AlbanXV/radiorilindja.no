@@ -1,5 +1,5 @@
 import React from 'react';
-import rr_bg from '../assets/rr_bg.mov'
+import rr_bg from '../assets/rr_bg.mp4'
 
 function VideoSection() {
   return (
