@@ -7,13 +7,11 @@ function Radio() {
 
     const handlePlay = () => {
         if (!playBtn) {
-            if (!playBtn) {
-                audio.play().then(() => {
+            audio.play().then(() => {
 
-                }).catch(error => {
-                    console.error('Failed to start playback:', error);
-                });
-            }
+            }).catch(error => {
+                console.error('Failed to start playback:', error);
+            });
         }
         else {
             audio.pause()
