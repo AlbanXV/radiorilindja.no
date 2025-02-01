@@ -8,7 +8,6 @@ const resources = {
   no: {
     translation: {
       "Nettradio": "24/7 Nettradio",
-      "Program": "PROGRAM - INTERVJU",
       "Gjest": "Gjest i studio",
       "Dato": "Dato",
       "Klokkeslett": "Klokkeslett",
@@ -25,7 +24,6 @@ const resources = {
   sq: {
     translation: {
       "Nettradio": "24/7 Internet Radio",
-      "Program": "PROGRAMI - INTERVISTA",
       "Gjest": "Mysafir në studio",
       "Dato": "Data",
       "Klokkeslett": "Koha", 

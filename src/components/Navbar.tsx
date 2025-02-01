@@ -23,7 +23,7 @@ function Navbar() {
 
     const { t, i18n } = useTranslation();
 
-    const changeLanguage = (i) => {
+    const changeLanguage = (i:any) => {
         i18n.changeLanguage(i);
     }
 

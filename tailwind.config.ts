@@ -1,6 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js,ts,tsx}"],
+import type { Config } from 'tailwindcss'
+
+export default {
+  content: ["./src/**/*.{html,ts,tsx}"],
   theme: {
     extend: {
       backgroundImage: {
@@ -17,5 +18,5 @@ module.exports = {
     },
   },
   plugins: [],
-}
+} satisfies Config
 

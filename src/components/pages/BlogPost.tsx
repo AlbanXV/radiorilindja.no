@@ -9,14 +9,14 @@ import { FaArrowLeft } from 'react-icons/fa'
 
 const builder = ImageUrlBuilder(sanityClient);
 
-function urlFor(source) {
+function urlFor(source:any) {
     return builder.image(source)
 }
 
 function BlogPost() {
     const { t, i18n } = useTranslation();
 
-    const [blogPost, setBlogPost] = useState(null);
+    const [blogPost, setBlogPost] = useState<any>(null);
     const { slug } = useParams();
 
     useEffect(() => {

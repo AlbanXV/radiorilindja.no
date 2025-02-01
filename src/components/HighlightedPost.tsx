@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 function HighlightedPost() {
     const { t, i18n } = useTranslation();
 
-    const [postData, setPost] = useState(null)
+    const [postData, setPost] = useState<any>(null)
 
     useEffect(() => {
         sanityClient.fetch(`*[_type == "post"]{
@@ -49,7 +49,7 @@ function HighlightedPost() {
                 bg-[length:200%_auto] animate-gradient'>{t('FredagNy')}</p>
                 <h1 className='text-2xl md:text-4xl md:py-6 lg:py-4 lg:my-5 ease-in-out duration-500 font-bold flex justify-center'>{t('ProgramNy')}</h1>
                 <div className='grid md:grid-cols-1 lg:grid-cols-1 gap-8'>
-                    {postData && postData.slice(0,1).map((post, index) => (
+                    {postData && postData.slice(0,1).map((post:any, index:any) => (
                     <article>
                         <Link to={"/post/" + post.slug.current} key={post.slug.current}>
                         <span className='block h-96 relative rounded shadow leading-snug bg-transparent' key={index}>

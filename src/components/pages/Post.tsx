@@ -9,7 +9,7 @@ import { FaArrowLeft } from 'react-icons/fa'
 function Post() {
     const { t, i18n } = useTranslation();
 
-    const [postData, setPost] = useState(null)
+    const [postData, setPost] = useState<any>(null)
 
     useEffect(() => {
         sanityClient.fetch(`*[_type == "post"]{
@@ -42,7 +42,7 @@ function Post() {
             <section className='container mx-auto'>
                 <h1 className='text-3xl md:text-5xl font-bold md:py-9 py-4 ease-in-out duration-500 flex justify-center text-center'>{t('ProgramNy')}</h1>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                    {postData && postData.map((post, index) => (
+                    {postData && postData.map((post:any, index:any) => (
                     <article>
                         <Link to={"/post/" + post.slug.current} key={post.slug.current}>
                         <span className='block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-blue-400 hover:border-blue-500' key={index}>
