@@ -13,7 +13,7 @@ function HighlightedPost() {
     const [postData, setPost] = useState(null)
 
     useEffect(() => {
-        sanityClient.fetch(`*[_type == "post"]{
+        sanityClient.fetch(`*[_type == "post"] | order(eventDate desc) {
             title,
             slug,
             eventDate,
